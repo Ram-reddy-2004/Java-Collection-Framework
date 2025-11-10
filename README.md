@@ -126,7 +126,105 @@ stack.push(20);
 System.out.println(stack.pop());
 ```
 ---
+##  Set Implementation
+Now let’s explore the Set Interface and its classes from the Java Collection Framework. 
+---
+## 1. Collection Interface using HashSet
 
+`Class`: Collection_Intrface_Implementation_Using_HashSet
+
+`Key Points`:
+
+Demonstrates how HashSet inherits Collection methods.
+
+`Methods used`: addAll(), remove(), contains(), size()
+
+`Highlights:`
+Removes duplicates automatically even though it implements the Collection interface.
+
+---
+## 2.Set Interface
+
+`Class:` Set_Interface_Implementation
+
+`Key Points:`
+
+- Represents unordered and unique collection.
+- No indexing support.
+- Duplicate elements are not allowed.
+
+`Example:`
+```
+Set<Integer> set = new HashSet<>();
+set.addAll(Arrays.asList(9,7,6,5,4,3,2));
+set.add(10);
+System.out.println(set);
+```
+---
+## 3.HashSet Class
+
+`Class:` HashSet_Class_Implementation
+
+`Key Methods:`
+
+add(), addAll(), remove(), clear(), clone(), contains()
+
+`Highlights:`
+
+Stores unique and unordered elements.
+
+Demonstrates cloning and duplicate handling.
+
+`Example:`
+```
+HashSet<Integer> set = new HashSet<>(Arrays.asList(1,2,3,4,2,1,0,100,10));
+HashSet<Integer> set1 = (HashSet<Integer>) set.clone();
+System.out.println(set1);
+```
+---
+## 4.LinkedHashSet Class
+
+`Class:` LinkedHashSet_Class_Implementation
+
+`Key Features:`
+
+- Maintains insertion order.
+- Eliminates duplicates.
+- Ideal when order + uniqueness are both required.
+
+`Example:`
+```
+LinkedHashSet<Integer> set = new LinkedHashSet<>(Arrays.asList(1,2,3,4,2));
+System.out.println(set); // [1, 2, 3, 4]
+```
+---
+## 5.SortedSet Interface
+
+`Class:` SortedSet_Interface_Implementation
+
+`Key Methods:`
+
+first(), last(), subSet(), headSet(), tailSet()
+
+`Highlights:`
+- Allows working with subsets and ranges of elements in sorted order.
+---
+## 6.TreeSet Class
+
+`Class:` TreeSet_Class_Implementation
+
+`Key Features:`
+
+- Maintains sorted order.
+- Implements NavigableSet and SortedSet.
+- Does not allow null elements.
+```
+TreeSet<Integer> set = new TreeSet<>(Arrays.asList(5,1,8,3,9));
+System.out.println(set); // [1, 3, 5, 8, 9]
+System.out.println(set.first()); // 1
+System.out.println(set.last());  // 9
+```
+---
 ## How to Run
 
 1. **Clone the repository**
@@ -135,6 +233,11 @@ System.out.println(stack.pop());
     javac Collections.java
     java List_Collections
     ```
+3. Compile and run `Set_Interface_Implementation.java`:
+   ```
+   javac Set_Implementation.java
+   java Set_Interface_Implementation
+   ```
 3. Observe the console output for example results of each concept.
 
 ---
