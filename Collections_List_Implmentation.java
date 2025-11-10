@@ -35,33 +35,33 @@ class Collection_Interface_Implemetation{
 		System.out.println("Collection Interface Implementaion and Its methods ...");
 		System.out.println();
 		
-		Collection<Integer> list = new ArrayList<>();
-		list.add(1);
-		list.addAll(Arrays.asList(2,3,4,5));
+		Collection<Integer> list = new ArrayList<>(); // ArrayList implements Collection interface so it consists only Collection methods + Iterable methods
+		list.add(1); // add element at end
+		list.addAll(Arrays.asList(2,3,4,5)); // add list of elements at a time
 		
-		System.out.println(list.contains(5));
-		System.out.println(list.containsAll(Arrays.asList(1,2,3,4)));
+		System.out.println(list.contains(5)); // whecks whether an element present or not
+		System.out.println(list.containsAll(Arrays.asList(1,2,3,4))); // checks a list of elements are present in other list or not
 		
-		System.out.println(list.isEmpty());
+		System.out.println(list.isEmpty()); // checks a list is empty or not
 		
-		list.remove(6);
+		list.remove(6); // removes element by index
 		System.out.println(list);
-		list.removeAll(Arrays.asList(1,2));
+		list.removeAll(Arrays.asList(1,2)); // removes list of elements
 		System.out.println(list);
-		list.removeIf(num -> num % 2 == 0);
-		System.out.println(list);
-		
-		list.retainAll(Arrays.asList(1,5));
+		list.removeIf(num -> num % 2 == 0); // removes elements with the satisfied condition
 		System.out.println(list);
 		
-		System.out.println(list.size());
+		list.retainAll(Arrays.asList(1,5)); // replaces list with elements present in both lists & other elements are removed
+		System.out.println(list);
 		
-		list.stream().forEach(System.out::println);
+		System.out.println(list.size()); // sreturns size of the list
+		
+		list.stream().forEach(System.out::println); // converts a list in to stream which can be helpful for more methods like below
 		int[] res = list.stream()
-				.filter(num -> num % 2 ==1)
-				.mapToInt(Integer :: intValue)
-				.toArray();
-		System.out.println(Arrays.toString(res));
+				.filter(num -> num % 2 ==1) // filters elements based on condition
+				.mapToInt(Integer :: intValue) // stream to integers
+				.toArray();// converts whole integers into array
+		System.out.println(Arrays.toString(res)); // convert object to string method to display array as list of elements
 		
 	}
 }
@@ -73,7 +73,7 @@ class List_interface_Implementation{
 		// All methods() in Collection Implementation + below all
 		
 		
-		 List<String> list = new ArrayList<>(Arrays.asList("ram","raja","rani","rahim"));
+		 List<String> list = new ArrayList<>(Arrays.asList("ram","raja","rani","rahim")); // ArrayList implemnts List so it consists only List methods+Collection Methods + Iterable methods
 		 list.add(1,"Seetha"); // add at index
 		 list.addFirst("Rakul"); //add first
 		 list.addLast("Preethi"); // add last
@@ -168,6 +168,9 @@ class LinkedList_Class_Implementation{
 		System.out.println(list);
 		System.out.println(list.pop()); // removes first element
 		System.out.println(list);
+
+		List<Integer> list2 = new LinkedList<>(Arrays.asList(1,2,3,4,5); // LinkedList implements List Interface so it has only List Interface methods only
+		System.out.println(list2);
 		
 	}
 }
@@ -179,32 +182,36 @@ class Vector_Class_Implementation{
 		// All methods() in List Implementation + below all
 		
 		Vector <Integer> list = new Vector<>(Arrays.asList(1,2,3,4,5));
-		list.addElement(10);
+		list.addElement(10); // adds elements ad end
 		
 		Integer[] copyed_list = new Integer[list.size()];
-		list.copyInto(copyed_list);
+		list.copyInto(copyed_list); // list elements are copied to  another array
 		System.out.println(Arrays.toString(copyed_list));
 		
-		System.out.println(list.elementAt(0));
-		list.insertElementAt(19, 2);
+		System.out.println(list.elementAt(0)); // returns element at given index
+		list.insertElementAt(19, 2); // insert element at given index;
 		System.out.println(list);
 		
-		System.out.println(list.firstElement());
-		System.out.println(list.lastElement());
+		System.out.println(list.firstElement()); // returns first element in a list
+		System.out.println(list.lastElement()); // returns last element in a list
 		
-		list.removeElement(0);
+		list.removeElement(0); // removes element at given index
 		System.out.println(list);
-		list.removeElement(Integer.valueOf(4));
+		list.removeElement(Integer.valueOf(4)); // remove element by value 
 		System.out.println(list);
 		
 		
 		Vector<Integer> list1 = new Vector<>(Arrays.asList(1,2,3,4,5));
-		list1.removeAllElements();
+		list1.removeAllElements(); // remove all elements from a list
 		System.out.println(list1);
 		
 		
-		list.setElementAt(100,1);
+		list.setElementAt(100,1); // updated values with provided value  at given index 
 		System.out.println(list);
+
+		List<Integer> list2 = new Vector<>(Arrays.asList(1,2,3,4,5)); // Vector implements List interface and it has only list methods
+		System.out.println(list2);
+		
 		
 		
 	}
@@ -217,22 +224,22 @@ class Stack_Class_Implementation{
 		// All methods() in List Implementation + All methods() in Vector + below all
 		Stack<Integer> list = new Stack<>();
 		
-		list.push(10);
+		list.push(10); // adds elements at end
 		list.push(20);
 		list.push(30);
 		list.push(40);
 		list.push(50);
 		System.out.println(list);
-		System.out.println("Remove last element : "+list.pop());
+		System.out.println("Remove last element : "+list.pop()); // remove and return element at end
 		System.out.println(list);
 		System.out.println(list.peek()); //top element in stack
 		
-		Vector<Integer> list2 = new Stack<>(); // Vector implements Stack only Vector Methods are there in the list2
+		Vector<Integer> list2 = new Stack<>(); // Stack implements Vector only Vector Methods are there in the list2
 		list2.add(10);
 		list2.add(30);
 		System.out.println(list2);
 		
-		List<Integer> list3 = new Stack<>(); // List implements Stack only List methods are available
+		List<Integer> list3 = new Stack<>(); // Stack implements List only List methods are available
 		list.add(10);
 		list.add(20);
 		System.out.println(list3);
@@ -272,3 +279,4 @@ public class List_Collections {
 	}
 
 }
+
