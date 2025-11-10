@@ -10,6 +10,8 @@ This repository demonstrates the core concepts and practical usage of the major 
 - `List` Interface
 - `ArrayList` Class
 - `LinkedList` Class
+- `Vector` Class
+- `Stack` Class
 
 **Each concept is explained with easy-to-understand examples and method calls, making it perfect for beginners, interview prep, or revision.**
 
