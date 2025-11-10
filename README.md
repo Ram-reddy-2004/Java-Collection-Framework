@@ -89,6 +89,40 @@ Efficient insertions/deletions at any position—demonstrates LinkedList-specifi
 
 ---
 
+### 6. Vector Class
+
+**Class:** `Vector_Class_Implementation`
+
+**Key Methods:**
+- `addElement()`, `removeElement()`, `copyInto()`, `insertElementAt()`, `setElementAt()`
+- `firstElement()`, `lastElement()`, `removeAllElements()`
+
+**Example:**
+```
+Vector<Integer> list = new Vector<>(Arrays.asList(1,2,3));
+list.addElement(10);
+list.copyInto(array);
+list.firstElement();
+```
+---
+
+### 7. Stack Class
+
+**Class:** `Stack_Class_Implementation`
+
+**Key Methods:**
+- `push()`, `pop()`, `peek()`
+- Inherits Vector & List methods (LIFO stack)
+
+**Example:**
+```
+Stack<Integer> stack = new Stack<>();
+stack.push(10);
+stack.push(20); 
+System.out.println(stack.pop());
+```
+---
+
 ## How to Run
 
 1. **Clone the repository**
