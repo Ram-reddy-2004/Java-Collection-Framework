@@ -1,5 +1,7 @@
 # Java Collection Framework 
 
+<img width="1427" height="833" alt="image" src="https://github.com/user-attachments/assets/1279d9bb-765e-4299-aa58-bfb556957bf7" />
+
 ## Overview
 
 This repository demonstrates the core concepts and practical usage of the major **Java Collection Framework interfaces and classes**. It covers:
