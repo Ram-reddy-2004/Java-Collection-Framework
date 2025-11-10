@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Deque;
 import java.util.List;
+import java.util.Stack;
 import java.util.LinkedList;
+import java.util.Vector;
 
 class Iterable_Super_Interface{
 	void implementation() {
@@ -139,6 +142,7 @@ class ArrayList_Class_Implementation{
 }
 class LinkedList_Class_Implementation{
 	void implementation() {
+		System.out.println();
 		System.out.println("LinkedList Class Implementaion and Its methods ...");
 		System.out.println();
 		// All methods() in List Implementation + below all
@@ -167,6 +171,76 @@ class LinkedList_Class_Implementation{
 		
 	}
 }
+class Vector_Class_Implementation{
+	void implementation() {
+		System.out.println();
+		System.out.println("Vector Class Implementaion and Its methods ...");
+		System.out.println();
+		// All methods() in List Implementation + below all
+		
+		Vector <Integer> list = new Vector<>(Arrays.asList(1,2,3,4,5));
+		list.addElement(10);
+		
+		Integer[] copyed_list = new Integer[list.size()];
+		list.copyInto(copyed_list);
+		System.out.println(Arrays.toString(copyed_list));
+		
+		System.out.println(list.elementAt(0));
+		list.insertElementAt(19, 2);
+		System.out.println(list);
+		
+		System.out.println(list.firstElement());
+		System.out.println(list.lastElement());
+		
+		list.removeElement(0);
+		System.out.println(list);
+		list.removeElement(Integer.valueOf(4));
+		System.out.println(list);
+		
+		
+		Vector<Integer> list1 = new Vector<>(Arrays.asList(1,2,3,4,5));
+		list1.removeAllElements();
+		System.out.println(list1);
+		
+		
+		list.setElementAt(100,1);
+		System.out.println(list);
+		
+		
+	}
+}
+class Stack_Class_Implementation{
+	void implementation() {
+		System.out.println();
+		System.out.println("Stack Class Implementaion and Its methods ...");
+		System.out.println();
+		// All methods() in List Implementation + All methods() in Vector + below all
+		Stack<Integer> list = new Stack<>();
+		
+		list.push(10);
+		list.push(20);
+		list.push(30);
+		list.push(40);
+		list.push(50);
+		System.out.println(list);
+		System.out.println("Remove last element : "+list.pop());
+		System.out.println(list);
+		System.out.println(list.peek()); //top element in stack
+		
+		Vector<Integer> list2 = new Stack<>(); // Vector implements Stack only Vector Methods are there in the list2
+		list2.add(10);
+		list2.add(30);
+		System.out.println(list2);
+		
+		List<Integer> list3 = new Stack<>(); // List implements Stack only List methods are available
+		list.add(10);
+		list.add(20);
+		System.out.println(list3);
+		
+		
+		
+	}
+}
 public class List_Collections {
 
 	public static void main(String[] args) {
@@ -188,6 +262,12 @@ public class List_Collections {
 		
 		LinkedList_Class_Implementation lci = new LinkedList_Class_Implementation();
 		lci.implementation();
+		
+		Vector_Class_Implementation vci = new Vector_Class_Implementation();
+		vci.implementation();
+		
+		Stack_Class_Implementation sci = new Stack_Class_Implementation();
+		sci.implementation();
 		
 	}
 
