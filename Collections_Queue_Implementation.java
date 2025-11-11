@@ -32,6 +32,8 @@ class Queue_Interface_Implementation_Using_PriorityQueue{
 		queue.add(10);
 		queue.addAll(Arrays.asList(20,30,40,50,60,10));
 		System.out.println(queue);
+		queue.remove();//removes highest prioity elemnt and that is root element and makes it min heap tree
+		System.out.println(queue);
 	}
 }
 
@@ -77,6 +79,7 @@ class Deque_Implementation_Using_ArrayDequeue{
 		System.out.println(queue2.getLast());// return last element
 		System.out.println();
 		
+		System.out.println("Stack Operations...in ArrayDeque");
 		queue2.push(10); 
 		queue2.push(15);// add element at first  
 		System.out.println(queue2); 
@@ -89,6 +92,14 @@ class Deque_Implementation_Using_ArrayDequeue{
 		
 		System.out.println(queue2);
 		
+		System.out.println(queue2.reversed());
+		
+		System.out.println("Queue_Operations on Array Deque...");
+		queue2.offer(10); // add element at end
+		queue2.offerFirst(5); // add element at first
+		queue2.offerLast(100); // add element last
+		System.out.println(queue2);
+		
 		System.out.println(queue2.poll()); // remove and returns first element
 		System.out.println(queue2.pollFirst()); // remove and returns first element
 		System.out.println(queue2.pollLast());// remove and returns last element
@@ -97,6 +108,8 @@ class Deque_Implementation_Using_ArrayDequeue{
 		
 		queue2.addAll(Arrays.asList(8,1,9,10,1,8));
 		System.out.println(queue2);
+		queue2.remove(); // removes first element of queue
+		System.out.println(queue2);
 		queue2.removeFirstOccurrence(1); // removes first occurance of element in two or more same values
 		queue2.removeLastOccurrence(8); // removes last occurance of element in two or more same values
 		queue2.removeFirst(); // remove first element 
@@ -104,10 +117,34 @@ class Deque_Implementation_Using_ArrayDequeue{
 		System.out.println(queue2);
 		System.out.println();
 		
-		queue2.offer(10); // add element at end
-		queue2.offerFirst(5); // add element at first
-		queue2.offerLast(100); // add element last
-		System.out.println(queue2);
+		
+	}
+}
+class ArrayDeque_Class_Implementation{
+	void implementation() {
+		// It consits of all methods in Deque methods() + Collection methods() + below All ..
+		ArrayDeque<Integer> queue = new ArrayDeque<>();
+		queue.addAll(Arrays.asList(1,3,4,5,6,7));
+		System.out.println(queue);
+		ArrayDeque<Integer> cloned_queue = (ArrayDeque<Integer>)queue.clone();
+		System.out.println(cloned_queue);
+		cloned_queue.add(10);
+		System.out.println(cloned_queue);
+		System.out.println(queue);
+	}
+}
+class Deque_Implementation_Using_LinkedList{
+	void implementation() {
+		// Linkedlist implements Dequeue interface..
+		// it consists of Collection methods() + Deque methods() 
+		Deque<Integer> queue = new LinkedList<Integer>();
+		queue.addAll(Arrays.asList(1,2,3,4,5,6));
+		System.out.println(queue); 
+		
+		// Linkedlist implements Queue Interface...
+		Queue<Integer> que = new LinkedList<>(Arrays.asList(1,2,3,4));
+		System.out.println(que);
+		
 		
 	}
 }
@@ -127,11 +164,22 @@ public class Queue_Implementation {
 		System.out.println("PriorityQueue Class Implementation ...");
 		Priority_Queue_Implementation pqi=new Priority_Queue_Implementation();
 		pqi.implementation();
+		System.out.println();
 		
 		System.out.println("Deque Implementation using ArrayDeque...");
 		Deque_Implementation_Using_ArrayDequeue diuad = new Deque_Implementation_Using_ArrayDequeue();
 		diuad.implementation();
+		System.out.println();
 		
+		System.out.println("ArrayDeque Class Implementation ...");
+		ArrayDeque_Class_Implementation aci = new ArrayDeque_Class_Implementation();
+		aci.implementation();
+		System.out.println();
+		
+		System.out.println("Deque Implementation using LinkedList...");
+		Deque_Implementation_Using_LinkedList diul  = new Deque_Implementation_Using_LinkedList();
+		diul.implementation();
+		System.out.println();
 		
 	}
 
