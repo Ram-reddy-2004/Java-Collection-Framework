@@ -225,7 +225,7 @@ System.out.println(set.first()); // 1
 System.out.println(set.last());  // 9
 ```
 ---
-# 🧩 Queue and Collection Implementations in Java
+## 🧩 Queue and Collection Implementations in Java
 
 This repository demonstrates the **implementation and behavior of Java Queue, Deque, and Collection interfaces** using classes like  
 ➡️ `PriorityQueue`  
@@ -240,7 +240,7 @@ Each class showcases how these collections work internally and how various metho
 
 In Java, the **Queue**, **Deque**, and **Collection** interfaces define how elements can be stored, accessed, and removed in an organized manner.
 
-### ✅ Key Points:
+## ✅ Key Points:
 - **Queue** → Follows **FIFO (First In, First Out)**  
 - **Deque (Double-Ended Queue)** → Elements can be added or removed **from both ends**
 - **PriorityQueue** → Follows a **heap structure** (by default Min-Heap)
@@ -249,7 +249,7 @@ In Java, the **Queue**, **Deque**, and **Collection** interfaces define how elem
 
 ---
 
-### 1️⃣ `Collection_Implements_Using_Priority_Class`
+## 1️⃣ `Collection_Implements_Using_Priority_Class`
 **Purpose:** Demonstrates how `PriorityQueue` can implement the `Collection` interface.
 
 **Key Features:**
@@ -260,13 +260,13 @@ In Java, the **Queue**, **Deque**, and **Collection** interfaces define how elem
 **Main Methods Used:**
 ```java
 add(), addAll(), remove()
-
+```
 ---
-### 2️⃣ Queue_Interface_Implementation_Using_PriorityQueue
+## 2️⃣ Queue_Interface_Implementation_Using_PriorityQueue
 
-***Purpose:*** Demonstrates Queue interface using a PriorityQueue.
+**Purpose:** Demonstrates Queue interface using a PriorityQueue.
 
-***Key Features:***
+**Key Features:*
 
 - Implements Queue interface.
 
@@ -274,36 +274,36 @@ add(), addAll(), remove()
 
 - remove() deletes the highest priority (smallest) element.
 
-***Main Methods Used:***
+**Main Methods Used:**
 ```
 add(), addAll(), remove()
 ```
 
-***Concept Reminder:***
+**Concept Reminder:**
 
 - PriorityQueue does not maintain insertion order — it maintains heap order.
 ---
-### 3️⃣ Priority_Queue_Implementation
+## 3️⃣ Priority_Queue_Implementation
 
-***Purpose:*** Explains the working of PriorityQueue directly.
+**Purpose:** Explains the working of PriorityQueue directly.
 
-***Highlights:***
+**Highlights:**
 
 - Internal structure is a heap (by default a min-heap).
 
 - Elements are arranged in ascending order automatically.
 
-***Example Methods Used:***
+**Example Methods Used:*
 ```
 addAll()
 
 ```
 ---
-### 4️⃣ Deque_Implementation_Using_ArrayDequeue
+## 4️⃣ Deque_Implementation_Using_ArrayDequeue
 
-***Purpose:*** Demonstrates Deque behavior using ArrayDeque.
+**Purpose:** Demonstrates Deque behavior using ArrayDeque.
 
-***Key Features:***
+**Key Features:**
 
 - Implements Collection, Queue, and Deque interfaces.
 
@@ -313,22 +313,22 @@ addAll()
 
 - Faster than LinkedList.
 
-***📍 Queue Operations:***
+**📍 Queue Operations:**
 ```
 add(), addAll(), element(), peek(), poll()
 ```
 
-***📍 Deque Operations:***
+**📍 Deque Operations:**
 ```
 addFirst(), addLast(), getFirst(), getLast()
 ```
 
-***📍 Stack Operations:***
+**📍 Stack Operations:**
 ```
 push(), pop(), peek()
 ```
 
-📍 ***Offer & Poll Methods:***
+📍 **Offer & Poll Methods:**
 ```
 offer() → // Adds at the end
 
@@ -336,7 +336,7 @@ offerFirst() / offerLast() → // Adds at front or end
 
 poll() / pollFirst() / pollLast() → // Removes and returns first/last elements
 ```
-📍*** Remove Methods:***
+📍**Remove Methods:**
 ```
 remove() → // Removes first element
 
@@ -347,24 +347,24 @@ removeLastOccurrence() → // Removes last matching element
 ---
 ### 5️⃣ ArrayDeque_Class_Implementation
 
-***Purpose: ***Shows cloning and additional operations of ArrayDeque.
+**Purpose:** Shows cloning and additional operations of ArrayDeque.
 
-***Key Features:***
+**Key Features:**
 
 - Supports cloning (Shallow copy of queue).
 
 - Shows how two queues operate independently after cloning.
 
-***Example Methods Used:***
+**Example Methods Used:**
 ```
 clone()
 ```
 ---
-### 6️⃣ Deque_Implementation_Using_LinkedList
+## 6️⃣ Deque_Implementation_Using_LinkedList
 
-***Purpose:*** Demonstrates that LinkedList can implement both Deque and Queue.
+**Purpose:** Demonstrates that LinkedList can implement both Deque and Queue.
 
-***Key Features:***
+**Key Features:**
 
 - Dynamic size (no fixed capacity).
 
@@ -372,7 +372,7 @@ clone()
 
 - Provides Queue behavior with FIFO structure.
 
-***Example Methods Used:***
+**Example Methods Used:**
 ```
 addAll(), add(), peek(), remove()
 ```
