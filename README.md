@@ -377,6 +377,156 @@ clone()
 addAll(), add(), peek(), remove()
 ```
 ---
+
+# 🗺️ Java Map Interface Implementations
+
+This repository provides a **complete guide and implementation of Java’s `Map` interface** and its subclasses — including `HashMap`, `Hashtable`, `LinkedHashMap`, `TreeMap`, and `SortedMap`.  
+
+Each class in this project demonstrates:
+- How these maps store and access data (key-value pairs)
+- The difference between various Map types
+- The usage of **all major methods** with clear comments and real outputs
+
+---
+
+## 📘 Overview
+
+In Java, the **Map Interface** represents a collection of key-value pairs.  
+It **does not allow duplicate keys** — each key can map to **only one value**.
+
+### ✅ Key Concepts:
+- `Map` stores **unique keys** and **associated values**
+- `HashMap` → Fast, non-synchronized map (unordered)
+- `Hashtable` → Thread-safe map (synchronized)
+- `LinkedHashMap` → Maintains **insertion order**
+- `TreeMap` → Maintains **sorted order of keys**
+- `SortedMap` → Interface implemented by `TreeMap`, keeps keys in **natural order**
+
+---
+
+## 🧩 Classes Explained
+
+### 1️⃣ `Map_Interface_Implementation_using_Hashtable`
+**Purpose:** Demonstrates complete usage of `Map` interface using the `Hashtable` class.  
+**Key Concept:** Stores key-value pairs in a **thread-safe** and **unordered** manner.
+
+#### 🔹 Methods Used and Explained:
+- `put(key, value)` → Adds a key-value pair
+- `putAll(map)` → Adds all entries from another map
+- `putIfAbsent(key, value)` → Adds a key-value pair only if key is missing
+- `get(key)` → Retrieves value for given key
+- `getOrDefault(key, defaultValue)` → Returns default value if key doesn’t exist
+- `compute(key, (k,v) -> expression)` → Updates existing value using a function
+- `computeIfAbsent(key, k -> value)` → Adds entry if key missing
+- `computeIfPresent(key, (k,v) -> newValue)` → Modifies value if key present
+- `containsKey(key)` / `containsValue(value)` → Checks if key/value exists
+- `entrySet()` → Returns all key-value pairs
+- `forEach((k,v) -> ...)` → Iterates through all pairs using lambda
+- `equals(map)` → Compares two maps
+- `isEmpty()` → Checks if map has any entries
+- `keySet()` → Returns all keys
+- `merge(key, value, (k,v) -> function)` → Combines old and new values
+- `remove(key)` / `remove(key, value)` → Removes by key or both
+- `replace(key, value)` → Updates a single value
+- `replace(key, oldValue, newValue)` → Updates only if old value matches
+- `replaceAll((k,v) -> expression)` → Updates all values
+- `size()` → Returns number of entries
+- `values()` → Returns all values as a collection
+- `clear()` → Removes all entries
+
+🧠 *Demonstrates every major method of the `Map` interface clearly with examples.*
+
+---
+
+### 2️⃣ `Hashtable_Class_Implementation`
+**Purpose:** Shows internal methods of the `Hashtable` class.  
+**Key Concept:** Synchronized version of `HashMap`, thread-safe but slower.
+
+#### 🔹 Additional Methods:
+- `clone()` → Creates a shallow copy of Hashtable
+- `contains()` → Legacy method, same as `containsValue()`
+- `keys()` → Returns `Enumeration` of all keys
+- `Enumeration.hasMoreElements()` → Checks next element
+- `Enumeration.nextElement()` → Returns next key
+
+🧠 *Shows how enumeration works (like iterators) and cloning behavior.*
+
+---
+
+### 3️⃣ `HashMap_Class_Implementation`
+**Purpose:** Demonstrates `HashMap` which is **unsynchronized** and **faster** than `Hashtable`.
+
+#### 🔹 Key Points:
+- `put()` → Adds entries
+- `new HashMap<>(capacity)` → Initializes with a capacity
+- `getOrDefault()` → Retrieves existing value or returns default
+- `HashMap<Integer, ArrayList<String>>` → Demonstrates complex values (object as value)
+
+#### 🔹 Example Concepts:
+- Creating nested map with lists as values
+- Understanding uniqueness of keys and flexibility of values
+
+🧠 *Used widely for most non-threaded applications because of its efficiency.*
+
+---
+
+### 4️⃣ `LinkedHashMap_Class_Implementation`
+**Purpose:** Demonstrates the **LinkedHashMap**, which maintains **insertion order**.  
+**Key Concept:** Extends `HashMap` but maintains a doubly linked list of entries.
+
+#### 🔹 Methods Used:
+- `put()` → Adds entries in insertion order
+- `clone()` → Creates a shallow copy
+- `firstEntry()` → Returns the first inserted key-value pair
+- `lastEntry()` → Returns the last key-value pair
+- `sequencedEntrySet()` → Returns entries in order
+- `sequencedKeySet()` / `sequencedValues()` → Ordered view of keys/values
+- `pollFirstEntry()` / `pollLastEntry()` → Removes first or last entries
+
+🧠 *Best used when you need predictable iteration order of elements.*
+
+---
+
+### 5️⃣ `SortedMap_Interface_Implementation`
+**Purpose:** Demonstrates `SortedMap` (interface) using `TreeMap`.  
+**Key Concept:** Stores keys in **sorted (ascending)** order by default.
+
+#### 🔹 Methods Used:
+- `put()` / `putIfAbsent()` → Add elements
+- `firstKey()` / `lastKey()` → Returns first and last keys
+- `firstEntry()` / `lastEntry()` → Returns first and last pairs
+- `pollFirstEntry()` / `pollLastEntry()` → Removes first/last pair
+- `reversed()` → Returns reverse order map
+- `sequencedEntrySet()` / `sequencedKeySet()` / `sequencedValues()` → Ordered sets
+- `subMap(fromKey, toKey)` → Returns range of key-value pairs
+- `headMap(toKey)` / `tailMap(fromKey)` → Partial views of map
+- `new TreeMap<>(Collections.reverseOrder())` → Creates descending order TreeMap
+
+🧠 *Ideal for automatically sorted data or range-based operations.*
+
+---
+
+### 6️⃣ `TreeMap_Class_Implementation`
+**Purpose:** Demonstrates full functionality of `TreeMap` (implements `NavigableMap`, `SortedMap`, and `Map`).  
+**Key Concept:** Keeps keys sorted in ascending order (or by custom comparator).
+
+#### 🔹 Map Methods Demonstrated:
+- `put()` / `getOrDefault()` → Adds or updates frequency
+- `forEach()` → Prints key-value pairs using lambda
+
+#### 🔹 TreeMap-Specific Methods:
+- `ceilingEntry(key)` / `ceilingKey(key)` → Returns entry/key ≥ given key
+- `descendingKeySet()` / `descendingMap()` → Reverse order of keys/map
+- `floorKey(key)` → Returns key ≤ given key
+- `higherEntry(key)` / `higherKey(key)` → Entry/key greater than given key
+- `lowerEntry(key)` / `lowerKey(key)` → Entry/key less than given key
+- `navigableKeySet()` → Returns all keys in sorted order
+- `clone()` → Creates copy of TreeMap
+- `comparator()` → Checks ascending/descending sorting order
+
+🧠 *TreeMap is best for ordered, navigable map structures where sorted traversal is required.*
+
+---
 ## How to Run
 
 1. **Clone the repository**
