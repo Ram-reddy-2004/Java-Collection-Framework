@@ -225,6 +225,43 @@ System.out.println(set.first()); // 1
 System.out.println(set.last());  // 9
 ```
 ---
+# 🧩 Queue and Collection Implementations in Java
+
+This repository demonstrates the **implementation and behavior of Java Queue, Deque, and Collection interfaces** using classes like  
+➡️ `PriorityQueue`  
+➡️ `ArrayDeque`  
+➡️ `LinkedList`  
+
+Each class showcases how these collections work internally and how various methods from their interfaces behave in real examples.
+
+---
+
+## 📘 Overview
+
+In Java, the **Queue**, **Deque**, and **Collection** interfaces define how elements can be stored, accessed, and removed in an organized manner.
+
+### ✅ Key Points:
+- **Queue** → Follows **FIFO (First In, First Out)**  
+- **Deque (Double-Ended Queue)** → Elements can be added or removed **from both ends**
+- **PriorityQueue** → Follows a **heap structure** (by default Min-Heap)
+- **ArrayDeque** → A **resizable array-based implementation** of Deque (faster than LinkedList)
+- **LinkedList** → Implements both **Queue** and **Deque**, supports dynamic memory
+
+---
+### Queue Implementation 
+
+### 1️⃣ `Collection_Implements_Using_Priority_Class`
+**Purpose:** Demonstrates how `PriorityQueue` can implement the `Collection` interface.
+
+**Key Features:**
+- Implements `Collection` interface.
+- Stores elements in a **min-heap order**.
+- Elements are added **level-by-level** (heap property maintained automatically).
+
+**Main Methods Used:**
+```java
+add(), addAll(), remove()
+
 ## How to Run
 
 1. **Clone the repository**
